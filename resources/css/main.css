@@ -1,0 +1,286 @@
+/*
+    GENERAL
+*/
+
+/*Pudding and margin counts to total width / height*/
+* {
+    box-sizing: border-box;
+}
+
+/*Font*/
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+body {
+    text-align: center;
+    background-color: #131317;
+    color: white;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+.color-blue {
+    color: blue;
+}
+
+header {
+    color: #ffffff;
+    padding: 15px;
+    font-size: 35px;
+}
+
+footer {
+    padding: 15px;
+    font-size: medium;
+    color: white;
+}
+
+footer > h3 {
+    color: blue;
+}
+
+/* List */
+ul {
+    counter-reset: index;
+    list-style-type: none; /* Remove standard bullets since index is used instead */
+}
+
+ol {
+    list-style-position: inside;
+}
+  
+/* List element */
+.pretty-li {
+    counter-increment: index;  /* Create counter */
+    padding: 12px 0;
+    font-size: 30px;
+}
+  
+  
+/* Element counter */
+.pretty-li::before {
+    content: counters(index, "."); /* Increment counter */
+    font-size: 30px;
+    font-weight: bold;
+    min-width: 50px;
+    padding: 12px;
+    background-image: linear-gradient(to bottom, aquamarine, orangered);
+    background-clip: inherit;
+    -webkit-background-clip: text; /* Available only in some browsers */
+    -webkit-text-fill-color: transparent; /* Available only in some browsers */
+}
+
+/*Generic image*/
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+input {
+    font-size: 30px;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: blue;
+    color: white;
+    background-color: black;
+}
+
+.clear {
+    color:inherit;
+}
+
+#main-menu > h3 {
+    color: blue;
+}
+
+/* Grid container - profile */
+.profile {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.profile > div {
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+}
+
+.profile-photo > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-photo {
+    grid-area: 1 / 1 / 4/ 4;
+}
+
+.profile-icon-info {
+    grid-column: 1 / 3;
+}
+
+.profile-icon {
+    grid-column: 3 / 4;
+}
+
+/* Grid container - projects */
+.projects {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.projects > div {
+    text-align: center;
+    padding: 20px;
+}
+
+.projects-photo > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    border: 10px solid black;
+}
+
+.projects-header {
+    grid-column: 1 / 4;
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+}
+
+.projects-technologies {
+    grid-column: auto / span 1; /* Just to show use of span ;) */
+}
+
+.projects-description {
+    grid-column: auto / span 3; /* Just to show use of span ;) */
+}
+
+.projects-team {
+    grid-row: auto / span 1; /* Just to show use of span ;) */
+}
+/*Flexbox*/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu > div {
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/*
+    Columns definitions
+    col-i means that this column takes i-grids
+*/
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/*
+    PHONES
+*/
+@media only screen and (max-width: 750px) {
+    .col-p-1 {width: 8.33%;}
+    .col-p-2 {width: 16.66%;}
+    .col-p-3 {width: 25%;}
+    .col-p-4 {width: 33.33%;}
+    .col-p-5 {width: 41.66%;}
+    .col-p-6 {width: 50%;}
+    .col-p-7 {width: 58.33%;}
+    .col-p-8 {width: 66.66%;}
+    .col-p-9 {width: 75%;}
+    .col-p-10 {width: 83.33%;}
+    .col-p-11 {width: 91.66%;}
+    .col-p-12 {width: 100%;}
+    .profile-photo > img {
+        border: 10px solid black;
+    }
+    .small-disappear {
+        display: none;
+    }
+    .projects-photo {
+        grid-area: auto / auto / span 3/ span 3;
+    }
+}
+
+/*
+    TABLETS
+*/
+@media only screen and (min-width: 750px) and (max-width: 992px) {
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+    .medium-disappear {
+        display: none;
+    }
+    .projects {
+        background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+        border-radius: 10px;
+    }
+    .projects-photo {
+        grid-area: auto / auto / span 3/ span 3;
+    }
+}
+
+/*
+    DESKTOP
+*/
+@media only screen and (min-width: 992px) {
+    .col-d-1 {width: 8.33%;}
+    .col-d-2 {width: 16.66%;}
+    .col-d-3 {width: 25%;}
+    .col-d-4 {width: 33.33%;}
+    .col-d-5 {width: 41.66%;}
+    .col-d-6 {width: 50%;}
+    .col-d-7 {width: 58.33%;}
+    .col-d-8 {width: 66.66%;}
+    .col-d-9 {width: 75%;}
+    .col-d-10 {width: 83.33%;}
+    .col-d-11 {width: 91.66%;}
+    .col-d-12 {width: 100%;}
+    .projects {
+        background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+        border-radius: 10px;
+    }
+    .projects-photo {
+        grid-area: auto / auto / span 2/ span 2;
+    }
+    #main-menu {
+        background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+        border-radius: 10px;
+    }
+}

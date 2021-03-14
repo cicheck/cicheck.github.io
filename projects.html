@@ -1,0 +1,137 @@
+<!DOCTYPE html >
+<html lang ="en" >
+    <head>
+        <meta charset ="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="./resources/css/main.css">
+        <title>About me</title>
+    </head>
+    <body>
+        <header class="row"><h1>Chosen projects</h1></header>
+        <div class="row">
+            <main class="col-p-12 col-t-8 col-d-8 projects">
+                <div class="projects-header">
+                    <h2>Dzikbook</h2>
+                </div>
+                <div class="projects-photo image-crop">
+                    <img src="./resources/images/pr_dzik.png" alt="There should be a project picture"/>
+                </div>
+                <div class="projects-teams small-disappear medium-disappear">
+                    <h3>Team</h3>
+                    <ul>
+                        <li class="pretty-li">Michał Janik</li>
+                        <li class="pretty-li">Ola Romanowska</li>
+                        <li class="pretty-li">Maciej Lewandowicz</li>
+                        <li class="pretty-li">Piotr Szymański</li>
+                        <li class="pretty-li">Paweł Kubala</li>
+                        <li class="pretty-li">Igor Cichecki</li>
+                    </ul>
+                </div>
+                <div class="projects-description">
+                    A social app dedicated to people trying to keep in good shape.
+                    Developed using:
+                    <ol>
+                        <li>
+                            <a href="https://flutter.dev/">Flutter</a>
+                        </li>
+                        <li>
+                            <a href="https://cassandra.apache.org/">Django</a>
+                        </li>
+                        <li>
+                            <a href="https://cassandra.apache.org/">Cassandra Db</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="projects-header">
+                    <h2>Cut it</h2>
+                </div>
+                <div class="projects-photo image-crop">
+                    <img src="./resources/images/pr_cut_it.jpg" alt="There should be a project picture"/>
+                </div>
+                <div class="projects-teams small-disappear medium-disappear">
+                    <h3>Team</h3>
+                    <ul>
+                        <li class="pretty-li">Mateusz Szmal</li>
+                        <li class="pretty-li">Magdalena Górska</li>
+                        <li class="pretty-li">Norbert Pilis</li>
+                        <li class="pretty-li">Igor Cichecki</li>
+                    </ul>
+                </div>
+                <div class="projects-description">
+                    Project developed during BITEhack hackathon The goal of this app is to
+                    significantly shorten the amount of time people need to spend when
+                    working with various kinds of texts. It provides users short summary
+                    instead of countless lines of text which may or may not contain
+                    information they look for.
+                </div>
+
+                <div class="projects-header">
+                    <h2>Find the nose!</h2>
+                </div>
+                <div class="projects-photo image-crop">
+                    <img src="./resources/images/pr_nose.png" alt="There should be a project picture"/>
+                </div>
+                <div class="projects-teams small-disappear medium-disappear">
+                    <h3>Team</h3>
+                    <ul>
+                        <li class="pretty-li">Igor Cichecki</li>
+                    </ul>
+                </div>
+                <div class="projects-description">
+                    <p>
+                        The goal of this project is to train a neural network responsible
+                        for finding the tip of the nose person displayed in the picture.
+                        During the process the two architectures were tested:
+                    </p>
+                    <ol>
+                        <li>
+                            Cascade model with architecture following
+                            <a href="http://mmlab.ie.cuhk.edu.hk/archive/CNN_FacePoint.htm">paper</a>.
+                        </li>
+                        <li>
+                            Small model that uses pre-trained ResNet as a backbone.
+                        </li>
+                    </ol>
+                    <p>
+                        Both models were trained on modified
+                        <a href="https://www.kaggle.com/tarunkr/facial-keypoints-68-dataset">FK dataset</a>.
+                        (To the original dataset, there were added, cropped copies of original pictures.
+                        Models trained on extended that way dataset performed
+                        significantly better on real world data.)
+                    </p>
+                </div>
+            </main>
+
+            <nav class="col-p-12 col-t-4 col-d-4 menu">
+                <h3>SHORT LIST</h3>
+                <div>
+                    <input type="button" onclick="location.href='https://github.com/cicheck/find-the-nose'" value="Find the nose!"/> 
+                </div>
+                <div>
+                    <input type="button" onclick="location.href='https://github.com/cicheck/compiler'" value="Compiler"/> 
+                </div>
+                <div>
+                    <input type="button" onclick="location.href='https://github.com/cicheck/go-game-web'" value="Go game"/>  
+                </div>
+                <div>
+                    <input type="button" onclick="location.href='https://gitlab.com/cicheck/dzikbook'" value="Dzikbook"/> 
+                </div>
+                <div>
+                    <input type="button" onclick="location.href='https://gitlab.com/cicheck/python-project'" value="Pea chat"/>
+                </div>
+                <div>
+                    <input type="button" onclick="location.href='https://github.com/cicheck/HackathonDefinitelyNotDevelopers'" value="Cut it"/>
+                </div>
+                <div>
+                    <input type="button" onclick="location.href='https://github.com/cicheck/HackathonDefinitelyNotDevelopers'" value="GWI"/>  
+                </div>
+            </nav>
+        </div>
+        <footer class="row">
+            Website created during course:
+            <br/>
+            <h3>MODERN TECHNOLOGIES WWW</h3>
+        </footer>
+    </body>
+</html >
